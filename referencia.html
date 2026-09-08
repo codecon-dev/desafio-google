@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referência do desafio — cores e ícones</title>
+<style>
+  @page { size: A4 portrait; margin: 12mm; }
+
+  :root {
+    --tinta: #111316;
+    --lime: #b1ff37;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --ui: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--ui);
+    color: var(--tinta);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .folha {
+    width: 186mm;
+    margin: 0 auto;
+    padding: 10mm 0;
+  }
+
+  .topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 3px solid var(--tinta);
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+
+  .sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: #5b6169;
+    letter-spacing: 0.03em;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .protocolo {
+    display: flex;
+    margin: 12px 0 18px;
+    border: 2px solid var(--tinta);
+  }
+
+  .gesto {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+  }
+  .gesto + .gesto { border-left: 2px solid var(--tinta); }
+  .gesto svg { flex: none; }
+
+  .gesto b {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #5b6169;
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+  .gesto strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  h2 {
+    display: inline-block;
+    background: var(--lime);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 9px;
+  }
+
+  .grade {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    border: 2px solid var(--tinta);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .num {
+    font-family: var(--mono);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    padding: 6px 0 7px;
+    border-bottom: 2px solid var(--tinta);
+  }
+
+  .swatch {
+    height: 42px;
+    border-bottom: 1px solid #c9ced3;
+  }
+
+  .nome {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 5px 2px;
+    text-transform: uppercase;
+  }
+
+  .caixa-icone {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caixa-icone svg { width: 38px; height: 38px; }
+
+  .rodape {
+    border-top: 2px solid var(--tinta);
+    padding-top: 9px;
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1.8;
+    color: #3a4046;
+  }
+  .rodape code {
+    background: #eef0f2;
+    padding: 1px 5px;
+    font-weight: 700;
+    color: var(--tinta);
+  }
+
+  @media print {
+    .folha { padding: 0; width: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="folha">
+
+  <div class="topo">
+    <h1>Cores e ícones<br>disponíveis</h1>
+    <p class="sub">Folha de quem enxerga o monitor.<br>Não mostrar para quem digita.</p>
+  </div>
+
+  <div class="protocolo">
+    <div class="gesto">
+      <svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">
+        <rect x="12" y="22" width="40" height="30" rx="12" fill="none" stroke="#111316" stroke-width="4"/>
+        <path d="M20 30h26M20 38h26" stroke="#111316" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M18 22c0-6 5-10 11-10s11 4 11 10" fill="none" stroke="#111316" stroke-width="4"/>
+      </svg>
+      <div>
+        <b>Punho fechado</b>
+        <strong>É COR</strong>
+      </div>
+    </div>
+    <div class="gesto">
+      <svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">
+        <path d="M32 54c-9 0-16-7-16-16V26" fill="none" stroke="#111316" stroke-width="4" stroke-linecap="round"/>
+        <path d="M48 38V26" fill="none" stroke="#111316" stroke-width="4" stroke-linecap="round"/>
+        <path d="M16 26V14M24 26V10M32 26V8M40 26V10M48 26V14" stroke="#111316" stroke-width="4" stroke-linecap="round"/>
+        <path d="M16 38c0 9 7 16 16 16s16-7 16-16" fill="none" stroke="#111316" stroke-width="4"/>
+      </svg>
+      <div>
+        <b>Mão aberta</b>
+        <strong>É ÍCONE</strong>
+      </div>
+    </div>
+    <div class="gesto">
+      <svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">
+        <circle cx="32" cy="32" r="26" fill="none" stroke="#111316" stroke-width="4"/>
+        <text x="32" y="44" font-family="ui-monospace, monospace" font-size="34" font-weight="700" text-anchor="middle" fill="#111316">7</text>
+      </svg>
+      <div>
+        <b>Depois, os dedos</b>
+        <strong>É O NÚMERO</strong>
+      </div>
+    </div>
+  </div>
+
+  <h2>Cores</h2>
+  <div class="grade">
+    <div class="item"><div class="num">1</div><div class="swatch" style="background:#34A853"></div><div class="nome">Verde</div></div>
+    <div class="item"><div class="num">2</div><div class="swatch" style="background:#202124"></div><div class="nome">Preto</div></div>
+    <div class="item"><div class="num">3</div><div class="swatch" style="background:#EA4335"></div><div class="nome">Vermelho</div></div>
+    <div class="item"><div class="num">4</div><div class="swatch" style="background:#FF6D00"></div><div class="nome">Laranja</div></div>
+    <div class="item"><div class="num">5</div><div class="swatch" style="background:#4285F4"></div><div class="nome">Azul</div></div>
+    <div class="item"><div class="num">6</div><div class="swatch" style="background:#DFE1E5"></div><div class="nome">Cinza claro</div></div>
+    <div class="item"><div class="num">7</div><div class="swatch" style="background:#FBBC05"></div><div class="nome">Amarelo</div></div>
+    <div class="item"><div class="num">8</div><div class="swatch" style="background:#7B1FA2"></div><div class="nome">Roxo</div></div>
+    <div class="item"><div class="num">9</div><div class="swatch" style="background:#70757A"></div><div class="nome">Cinza médio</div></div>
+    <div class="item"><div class="num">10</div><div class="swatch" style="background:#F2F2F2"></div><div class="nome">Quase branco</div></div>
+  </div>
+
+  <h2>Ícones</h2>
+  <div class="grade">
+
+    <div class="item"><div class="num">1</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="#5f6368"/><line x1="15" y1="15" x2="21" y2="21" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">2</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3" fill="#5f6368"/><path d="M6 11a6 6 0 0 0 12 0" fill="none" stroke="#5f6368" stroke-width="2"/><line x1="12" y1="17" x2="12" y2="21" stroke="#5f6368" stroke-width="2"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">3</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><g fill="#5f6368"><circle cx="6" cy="6" r="1.7"/><circle cx="12" cy="6" r="1.7"/><circle cx="18" cy="6" r="1.7"/><circle cx="6" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18" cy="12" r="1.7"/><circle cx="6" cy="18" r="1.7"/><circle cx="12" cy="18" r="1.7"/><circle cx="18" cy="18" r="1.7"/></g></svg>
+    </div></div>
+
+    <div class="item"><div class="num">4</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><path d="M3 7h4l1.5-2h7L17 7h4v13H3z" fill="none" stroke="#5f6368" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="4" fill="none" stroke="#5f6368" stroke-width="2"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">5</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#9aa0a6" stroke-width="2"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">6</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4" fill="none" stroke="#4285F4" stroke-width="2.4" stroke-linecap="round"/><path d="M15 3h4a2 2 0 0 1 2 2v4" fill="none" stroke="#EA4335" stroke-width="2.4" stroke-linecap="round"/><path d="M21 15v4a2 2 0 0 1-2 2h-4" fill="none" stroke="#FBBC05" stroke-width="2.4" stroke-linecap="round"/><path d="M3 15v4a2 2 0 0 0 2 2h4" fill="none" stroke="#34A853" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="#4285F4"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">7</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><g stroke="#5f6368" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></g></svg>
+    </div></div>
+
+    <div class="item"><div class="num">8</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><defs><clipPath id="mic8"><rect x="9" y="2" width="6" height="12" rx="3"/></clipPath></defs><g clip-path="url(#mic8)"><rect x="9" y="2" width="6" height="3" fill="#4285F4"/><rect x="9" y="5" width="6" height="3" fill="#EA4335"/><rect x="9" y="8" width="6" height="3" fill="#FBBC05"/><rect x="9" y="11" width="6" height="3" fill="#34A853"/></g><path d="M6 11a6 6 0 0 0 12 0" fill="none" stroke="#4285F4" stroke-width="2"/><line x1="12" y1="17" x2="12" y2="21" stroke="#34A853" stroke-width="2"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">9</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="#202124" stroke-width="3.5"/><line x1="15" y1="15" x2="21" y2="21" stroke="#202124" stroke-width="3.5" stroke-linecap="round"/></svg>
+    </div></div>
+
+    <div class="item"><div class="num">10</div><div class="caixa-icone">
+      <svg viewBox="0 0 24 24"><g fill="#5f6368"><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(45 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(90 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(135 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(180 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(225 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(270 12 12)"/><rect x="10.8" y="1.2" width="2.4" height="4.5" rx="0.6" transform="rotate(315 12 12)"/><circle cx="12" cy="12" r="6.5"/></g><circle cx="12" cy="12" r="2.6" fill="#fff"/></svg>
+    </div></div>
+
+  </div>
+
+  <div class="rodape">
+    Cor no CSS: <code>var(--cor-5)</code> &nbsp;·&nbsp; Ícone no HTML: <code>assets/icones/icone-05.svg</code> &nbsp;·&nbsp; 1 a 9 numa mão só. 10 são as duas mãos abertas.
+  </div>
+
+</div>
+</body>
+</html>
